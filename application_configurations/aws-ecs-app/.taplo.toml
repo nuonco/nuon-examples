@@ -1,8 +1,0 @@
-
-[formatting]
-align_entries = true
-reorder_keys  = false
-
-[schema]
-path    = "https://api.nuon.co/v1/general/config-schema"
-enabled = true
