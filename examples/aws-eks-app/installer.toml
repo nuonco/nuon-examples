@@ -1,0 +1,24 @@
+#:schema https://api.nuon.co/v1/general/config-schema?source=installer
+name              = "AWS EKS App Installer"
+description       = "One click installer for an AWS EKS Application."
+documentation_url = "https://docs.nuon.co/tutorials/aws-eks-app-tutorial"
+community_url     = "https://nuon-byoc.slack.com/ssb/redirect"
+homepage_url      = "https://nuon.co"
+github_url        = "https://github.com/nuonco"
+logo_url          = "https://nuon.co/_astro/logo.PEcNPe73_Z1ISTvP.svg"
+demo_url          = "https://nuon.co/"
+favicon_url       = "https://nuon.co/_astro/apple-touch-icon.CB8rPL88.png"
+
+# optional fields
+copyright_markdown = """
+© 2024 Nuon.
+"""
+footer_markdown = """
+[Terms of Service](https://nuon.co/terms)
+"""
+post_install_markdown = """
+# My EKS App
+
+My EKS App is being deployed.
+"""
+apps = ["apppmf8riv0c2qri6p3zsfeimz"]

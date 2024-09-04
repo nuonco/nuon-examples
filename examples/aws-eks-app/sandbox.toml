@@ -1,0 +1,12 @@
+#:schema https://api.nuon.co/v1/general/config-schema?source=sandbox
+terraform_version = "1.5.4"
+
+# https://docs.nuon.co/guides/install-access-delegation#setup-delegation
+# if you are using delegation, otherwise remove
+# govcloud clients must reach out for additional configuration
+# aws_delegation_iam_role_arn = "arn:aws:iam::xxxxxxxxxxxx:role/nuon-aws-ecs-install-access"
+
+[public_repo]
+directory = "aws-eks"
+repo = "nuonco/sandboxes"
+branch = "main"
