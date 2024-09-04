@@ -1,0 +1,22 @@
+#:schema https://api.nuon.co/v1/general/config-schema?source=terraform_module
+
+name              = "ecs_service"
+type              = "terraform_module"
+terraform_version = "1.5.3"
+
+[public_repo]
+repo      = "nuonco/guides"
+directory = "byo-vpc-tutorial/components/ecs-service"
+branch    = "main"
+
+[vars]
+service_name = "introspect"
+cluster_arn  = "{{.nuon.install.sandbox.outputs.ecs_cluster.arn}}"
+image_url    = "{{.nuon.components.docker_image.image.repository.uri}}"
+image_tag    = "{{.nuon.components.docker_image.image.tag}}"
+app_id       = "{{.nuon.app.id}}"
+org_id       = "{{.nuon.org.id}}"
+install_id   = "{{.nuon.install.id}}"
+vpc_id       = "{{.nuon.install.sandbox.outputs.vpc.id}}"
+domain_name  = "introspect.{{.nuon.install.sandbox.outputs.public_domain.name}}"
+zone_id      = "{{.nuon.install.sandbox.outputs.public_domain.zone_id}}"

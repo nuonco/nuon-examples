@@ -8,5 +8,5 @@ aws_delegation_iam_role_arn = "arn:aws:iam::949309607565:role/aws-ecs-app"
 
 [public_repo]
 directory = "aws-ecs"
-repo = "nuonco/sandboxes"
-branch = "main"
+repo      = "nuonco/sandboxes"
+branch    = "main"
