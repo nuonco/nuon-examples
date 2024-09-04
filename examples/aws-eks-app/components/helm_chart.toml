@@ -1,0 +1,19 @@
+#:schema https://api.nuon.co/v1/general/config-schema?source=helm
+name   = "helm_chart"
+type = "helm_chart"
+chart_name = "introspect"
+
+[public_repo]
+repo      = "nuonco/guides"
+directory = "aws-eks-tutorial/components/helm-chart"
+branch    = "main"
+
+[values]
+"image.repository"                   = "{{.nuon.components.docker_image.image.repository.uri}}"
+"image.tag"                          = "{{.nuon.components.docker_image.image.tag}}"
+"api.nlbs.public_domain_certificate" = "{{.nuon.components.certificate.outputs.public_domain_certificate_arn}}"
+"api.nlbs.public_domain"             = "introspect.{{.nuon.install.sandbox.outputs.public_domain.name}}"
+app_id                               = "{{.nuon.app.id}}"
+org_id                               = "{{.nuon.org.id}}"
+install_id                           = "{{.nuon.install.id}}"
+vpc_id                               = "{{.nuon.install.sandbox.outputs.vpc.id}}"

@@ -1,0 +1,33 @@
+#:schema https://api.nuon.co/v1/general/config-schema
+# This file contains template values for common Nuon application configuration options.
+# To use it for your app, edit as needed, then rename this file to nuon.aws-eks-app.toml and run
+#
+#   nuon apps sync -c nuon.aws-eks-app.toml
+#
+# See https://docs.nuon.co/concepts/apps for more information.
+
+version = "v1"
+description = "AWS EKS Application Demonstration"
+display_name = "AWS EKS App"
+slack_webhook_url = "https://slack.nuon.co"
+
+[installer]
+source = "installer.toml"
+
+[runner]
+source = "runner.toml"
+
+[sandbox]
+source = "sandbox.toml"
+
+# [inputs]
+# source = "template_inputs.toml"
+
+[[components]]
+source = "components/docker_image.toml"
+
+[[components]]
+source = "components/helm_chart.toml"
+
+[[components]]
+source = "components/https_certificate.toml"
